@@ -1,6 +1,7 @@
 package com.igzafer.kriptotakipci.service
 
 import com.igzafer.kriptotakipci.model.CryptoModel
+import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.Call
 import retrofit2.http.GET

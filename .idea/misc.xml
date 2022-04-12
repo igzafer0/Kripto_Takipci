@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/zafer/AndroidStudioProjects/KriptoTakipci/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/zafer/AndroidStudioProjects/KriptoTakipci/app/src/main/res/layout/price_row.xml" value="1.25" />
+        <entry key="..\:/Users/zafer/AndroidStudioProjects/KriptoTakipci/app/src/main/res/drawable/circle.xml" value="0.1045" />
+        <entry key="..\:/Users/zafer/AndroidStudioProjects/KriptoTakipci/app/src/main/res/drawable/img.xml" value="0.1045" />
+        <entry key="..\:/Users/zafer/AndroidStudioProjects/KriptoTakipci/app/src/main/res/layout/activity_main.xml" value="0.2812006319115324" />
+        <entry key="..\:/Users/zafer/AndroidStudioProjects/KriptoTakipci/app/src/main/res/layout/price_row.xml" value="0.5" />
       </map>
     </option>
   </component>

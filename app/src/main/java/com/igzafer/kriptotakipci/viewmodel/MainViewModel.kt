@@ -14,7 +14,7 @@ import io.reactivex.schedulers.Schedulers
 
 class MainViewModel : ViewModel(){
     private val apiService = ApiService()
-    private val disposable = CompositeDisposable()
+    val disposable = CompositeDisposable()
     val price_data = MutableLiveData<List<CryptoModel>>()
     val price_status = MutableLiveData<ApiStatus>()
 
@@ -25,9 +25,9 @@ class MainViewModel : ViewModel(){
     private fun getDataFromApi() {
         price_status.value = ApiStatus.LOADING
         disposable.add(
-            apiService.getPrices().subscribeOn(Schedulers.newThread())
+            apiService.getPrices().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<List<CryptoModel>>() {
+                .subscribeWith  (object : DisposableSingleObserver<List<CryptoModel>>() {
                     override fun onSuccess(t: List<CryptoModel>) {
                         price_status.value = ApiStatus.SUCCESS
                         price_data.value=t
@@ -39,5 +39,10 @@ class MainViewModel : ViewModel(){
                     }
                 })
         )
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposable.clear()
     }
 }
